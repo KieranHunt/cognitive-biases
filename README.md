@@ -16,6 +16,6 @@ We prepared the page to be responsive:
 
 ## Humans behind
 
-[UX in Lux](https://twitter.com/ux_lux)) is organised by [Stéphanie Walter](https://twitter.com/walterstephanie) and [Laurence Vagner](https://twitter.com/hellgy).
+[UX in Lux](https://twitter.com/ux_lux) is organised by [Stéphanie Walter](https://twitter.com/walterstephanie) and [Laurence Vagner](https://twitter.com/hellgy).
 
 Quick-coded on a macbook pro with only 5% battery left by [Geoffrey Crofte](https://twitter.com/geoffreycrofte).
