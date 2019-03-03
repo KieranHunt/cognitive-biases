@@ -4,7 +4,7 @@ Helping people find and understand cognitive biases.
 
 ## How to consult the list online
 
-Go to the [Github Page](https://uxinlux.github.io/cognitive-biaises/) to find the list.
+Go to the [Github Page](https://uxinlux.github.io/cognitive-biases/) to find the list.
 
 ## What can I do with
 
