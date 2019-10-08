@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Liste de biais cognitifs</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="og:image" content="favicon/og-image.jpg">
+	<meta property="og:image:width" content="1908">
+	<meta property="og:image:height" content="999">
+	<meta property="og:title" content="List of cognitive biases">
+	<meta property="og:description" content="The wikipedia list of cognitive biases revamped in a more digest readable way.">
+
+
+<meta property="og:url" content="https://uxinlux.github.io/cognitive-biases/">
+	<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		:root {
+			--purple: #9e1a88;
+			--purple-light: #daa7d2;
+			--orange: #e45b0b;
+			--orange-light: #f7ceb6;
+			--turquoise: #20B7B4;
+			--turquoise-light: #b8eae7;
+			--orange-decision: #F36F24;
+			--orange-decision-light: #ffe2d2;
+			--green-text: #307A3C;
+			--green-light:#dcead5;
+			--red-text: #BB3368;
+			--red-light:#f1c3d5;
+			--yellow-text: #AF7C09;
+			--yellow-light:#ffefb5;
+		}
+
+		body {
+			width: 20cm;
+			max-width: 100%;
+			margin: 80px auto 0;
+			padding: 0;
+			line-height: 1.6;
+			font-family: Helvetica, Arial, sans-serif;
+			color: #555;
+		}
+
+		h1, h2, p {
+			margin: 1.5em auto;
+			max-width: 100%;
+		}
+
+		p {
+			font-size: 1.05em;
+		}
+
+		h1 {
+			margin-bottom: .5em;
+			font-size: 2.5em;
+			text-align: center;
+			color: #9e1a88;
+			background-image: none;
+			background-image: linear-gradient(to right, var(--purple), var(--orange));
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+
+		}
+
+		.subtitle {
+			font-size: 1.2em;
+			letter-spacing: .02em;
+			margin-bottom: 80px;
+			text-align: center;
+		}
+
+		h2 {
+			margin-top: 80px;
+			color: var(--orange-decision);
+		}
+
+		table {
+			margin: 3em auto;
+			display: block;
+		}
+
+		body:not(.list) tbody,
+		body:not(.list) tr {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		tbody tr:first-child {
+			display: none;
+		}
+
+		tr {
+			width: calc(50% - 4px - 20px);
+			margin: 2px;
+			flex-direction: column;
+			border: 10px solid var(--orange-decision-light);
+			border-radius: 12px;
+		}
+
+		/* All contents */
+		td {
+			padding: 20px;
+			transition: .275s all;
+		}
+
+		/* Bias Name */
+		tr td:first-child {
+			padding-bottom: 0;
+			text-align: center;
+			font-size: 1.3em;
+			font-weight: 600;
+			color: var(--orange-decision);
+		}
+
+		tr td:first-child a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		tr td:nth-child(2) a {
+			color: var(--orange-decision);
+		}
+
+		/* List layout */
+		.list td:first-child {
+			padding-bottom: 20px;
+			border-right: 0;
+			text-align: left;
+		}
+		.list td:nth-child(2) {
+			border-left: 0;
+		}
+
+		.list tr {
+			width: 100%;
+			margin: 2px 0;
+		}
+
+		.list table {
+			border-collapse: collapse;
+			display: table;
+		}
+
+		.list td {
+			vertical-align: middle;
+			border: 5px solid var(--orange-light);
+		}
+
+		h2:nth-of-type(2) {
+			color: var(--turquoise);
+		}
+		table:nth-of-type(2) tr {
+			border-color: var(--turquoise-light);
+		}
+		table:nth-of-type(2) tr td:first-child {
+			color: var(--turquoise);
+		}
+		table:nth-of-type(2) tr td:nth-child(2) a {
+			color: var(--turquoise);
+		}
+
+
+		/* Alternative colors */
+		h2:nth-of-type(3) {
+			color: var(--green-text);
+		}
+		table:nth-of-type(3) tr {
+			border-color: var(--green-light);
+		}
+		table:nth-of-type(3) tr td:first-child {
+			color: var(--green-text);
+		}
+		table:nth-of-type(3) tr td:nth-child(2) a {
+			color: var(--green-text);
+		}
+
+		/* Alternative colors */
+		h2:nth-of-type(4) {
+			color: var(--yellow-text);
+		}
+		table:nth-of-type(4) tr {
+			border-color: var(--yellow-light);
+		}
+		table:nth-of-type(4) tr td:first-child {
+			color: var(--yellow-text);
+		}
+		table:nth-of-type(4) tr td:nth-child(2) a {
+			color: var(--yellow-text);
+		}
+
+		/* Alternative colors */
+		h2:nth-of-type(5) {
+			color: var(--red-text);
+		}
+		table:nth-of-type(5) tr {
+			border-color: var(--red-light);
+		}
+		table:nth-of-type(5) tr td:first-child {
+			color: var(--red-text);
+		}
+		table:nth-of-type(5) tr td:nth-child(2) a {
+			color: var(--red-text);
+		}
+
+
+
+
+		/* Switcher button */
+		[id="switch"] {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			padding: 10px 24px;
+			font-weight: bold;
+			border: 0;
+			background: linear-gradient(to right, #e7762e, #e64247);
+			color: #FFF;
+			font-size: .875em;
+			border-radius: 4px;
+			box-shadow: 0 8px 8px -8px rgba(0,0,0,.3);
+			cursor: pointer;
+			transition: all .275s;
+		}
+
+		[id="switch"]:hover,
+		[id="switch"]:focus {
+			box-shadow: 0 8px 8px 0 rgba(0,0,0,.2);
+		}
+
+		footer {
+			padding: 50px 16px;
+			text-align: center;
+			font-size: .875em;
+		}
+
+		footer p {
+			margin: 0;
+		}
+
+		footer a {
+			color: inherit;
+		}
+
+		@media print {
+			/* Remove Switch button */
+			[id="switch"] {
+				display: none;
+			}
+
+			/* Don't visually distinguish links */
+			body table:nth-of-type(n) tr td:nth-child(n) a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		@media (max-width: 640px) {
+			body {
+				margin: 16px auto;
+				width: auto;
+				padding: 16px;
+			}
+			h1 {
+				font-size: 1.8em;
+			}
+			.subtitle {
+				font-size: 18px;
+				margin-bottom: 56px;
+			}
+
+			h2 {
+				margin-top: 56px;
+			}
+			[id="switch"] {
+				display: none;
+			}
+
+			table, tbody, tr, td {
+				width: auto!important;
+				display: block!important;
+				text-align: left!important;
+			}
+			tr:first-child {
+				display: none!important;
+			}
+
+			tr {
+				border-width: 4px;
+				margin-bottom: 8px;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>List of cognitive biases</h1>
+
+	<p class="subtitle">Cognitive biases are systematic patterns of deviation from norm or rationality in judgment, and are often studied in psychology and behavioral economics.</p>
+
+
+	<h2>Prise de décision & comportement</h2>
+
+	<p>Ces biais peuvent orienter la prise de décision ou le comportement de la personne, en se basant sur les choix proposés ou des informations mises en valeurs.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Biais d'ancrage
+				</td>
+				<td>La tendance à s'appuyer trop lourdement (ou à "ancrer") sur un trait ou une information pour prendre des décisions. C’est généralement sur la première information acquise sur ce sujet.</sup>
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+	<h2>Raisonnement et  résolution de problème</h2>
+	<p>Ces biais peuvent changer la manière de raisonner ou de résoudre des problèmes et mener les personnes à des conclusions erronées.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Biais d'automatisation
+				</td>
+				<td>La tendance à privilégier les résultats des systèmes automatisés au dépend de ceux générés par des systèmes non-automatisés. Elle peut conduire à des informations automatisées erronées, annulant les décisions correctes qui auraient été prises par des systèmes non automatisés.</sup>
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+
+	<h2>Mémoire et souvenirs</h2>
+	<p>Ces biais peuvent influencer des choix en faisant appel à la mémoire ou aux souvenirs de la personne concernée.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Biais d'information
+				</td>
+				<td>La tendance à rechercher d'avantage d'informations en pensant que cela nous mènera à prendre de meilleures décisions, même quand cela ne peut pas affecter l'action.</sup>
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+	<h2>Interview et test utilisateur</h2>
+	<p>Ces biais peuvent vous influencer directement en tant que designer, lors de vos entretiens ou tests, et risquent de modifier le résultat de votre recherche. Ils influencent les personnes que vous allez interviewer ou qui vont tester vos produits et services.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Biais de l'angle mort
+				</td>
+				<td>La tendance à se considérer moins biaisé que les autres, ou à identifier plus de biais cognitifs chez les autres que chez soi.</sup>
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+
+	<h2>Effet Dunning – Kruger</h2>
+	<p>La tendance des personnes non-qualifiées à surestimer leurs propres capacités et celle des experts de sous-estimer les leurs.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Biais d'ancrage
+				</td>
+				<td>La tendance à s'appuyer trop lourdement (ou à "ancrer") sur un trait ou une information pour prendre des décisions. C’est généralement sur la première information acquise sur ce sujet.</sup>
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+
+
+
+	<button type="button" id="switch">Lines/Cards</button>
+
+	<footer>
+		<p>From Wikipedia <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases">List of cognitive biases</a> — <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0</a></p>
+		<p>Page made by <a href="https://twitter.com/geoffreycrofte">Geoffrey Crofte</a> for <a href="https://twitter.com/ux_lux">UX in Lux</a>.</p>
+	</footer>
+
+	<script>
+		let switcher = document.getElementById('switch'),
+			body = document.body;
+
+		switcher.addEventListener('click', function(){
+			body.classList.toggle('list');
+		});
+	</script>
+</body>
+
+</html>
