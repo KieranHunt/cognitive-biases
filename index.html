@@ -18,9 +18,8 @@
 	<meta property="og:image:height" content="999">
 	<meta property="og:title" content="List of cognitive biases">
 	<meta property="og:description" content="The wikipedia list of cognitive biases revamped in a more digest readable way.">
+	<meta property="og:url" content="https://uxinlux.github.io/cognitive-biases/">
 
-
-<meta property="og:url" content="https://uxinlux.github.io/cognitive-biases/">
 	<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,11 +36,11 @@
 		body {
 			width: 20cm;
 			max-width: 100%;
-			margin: 80px auto 0;
+			margin: 24px auto 0;
 			padding: 0;
 			line-height: 1.6;
 			font-family: Helvetica, Arial, sans-serif;
-			color: #555;
+			color: #665566;
 		}
 
 		h1, h2, p {
@@ -54,6 +53,9 @@
 		}
 
 		h1 {
+			width: max-content;
+			max-width: 100%;
+			margin-top: 0;
 			margin-bottom: .5em;
 			font-size: 2.5em;
 			text-align: center;
@@ -65,11 +67,35 @@
 
 		}
 
+		a {
+			color: var(--purple);
+			transition: color .275s;
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--orange);
+		}
+
+		.logo {
+			text-align: center;
+		}
+
+		.authors {
+			margin-top: -.5em;
+			margin-bottom: 3.5em;
+			text-align: center;
+			font-size: 0.875em;
+			font-weight: 600;
+		}
+
 		.subtitle {
-			font-size: 1.2em;
+			padding: 24px;
+			font-size: 1.3em;
 			letter-spacing: .02em;
 			margin-bottom: 80px;
 			text-align: center;
+			background-image: linear-gradient(to right, rgba(158, 26, 136, .05), rgba(228, 91, 11, .05));
 		}
 
 		h2 {
@@ -181,7 +207,7 @@
 
 		/* Switcher button */
 		[id="switch"] {
-			position: absolute;
+			position: fixed;
 			right: 20px;
 			top: 20px;
 			padding: 10px 24px;
@@ -202,13 +228,13 @@
 		}
 
 		footer {
-			padding: 50px 16px;
+			padding: 40px 16px;
 			text-align: center;
 			font-size: .875em;
 		}
 
 		footer p {
-			margin: 0;
+			margin: 1.5 0;
 		}
 
 		footer a {
@@ -268,7 +294,19 @@
 </head>
 
 <body>
+	
+	<p class="logo">
+		<img src="favicon/ux-in-lux.png" width="240" height="240" alt="UX In Lux">
+	</p>
+
 	<h1>List of cognitive biases</h1>
+
+	<p class="authors">
+		Page made by<br>
+		<a href="https://stephaniewalter.design/">Stéphanie Walter</a>, 
+		<a href="https://www.redisdead.net/">Laurence Vagner</a>,
+		<a href="https://twitter.com/geoffreycrofte">@GeoffreyCrofte</a>
+	</p>
 
 	<p class="subtitle">Cognitive biases are systematic patterns of deviation from norm or rationality in judgment, and are often studied in psychology and behavioral economics.</p>
 
