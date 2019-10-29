@@ -3,300 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>List of cognitive biases</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicon/site.webmanifest">
+	<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/favicon/favicon.ico">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-	<meta property="og:image" content="favicon/og-image.jpg">
-	<meta property="og:image:width" content="1908">
-	<meta property="og:image:height" content="999">
+	<meta property="og:image" content="assets/favicon/og-image.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="725">
 	<meta property="og:title" content="List of cognitive biases">
 	<meta property="og:description" content="The wikipedia list of cognitive biases revamped in a more digest readable way.">
 	<meta property="og:url" content="https://uxinlux.github.io/cognitive-biases/">
+	<link rel="stylesheet" href="assets/style.css">
 
 	<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<style>
-		:root {
-			--purple: #9e1a88;
-			--purple-light: #daa7d2;
-			--orange: #e45b0b;
-			--orange-light: #f7ceb6;
-			--turquoise: #459cb3;
-			--turquoise-light: #bbdbe3;
-		}
-
-		body {
-			width: 20cm;
-			max-width: 100%;
-			margin: 24px auto 0;
-			padding: 0;
-			line-height: 1.6;
-			font-family: Helvetica, Arial, sans-serif;
-			color: #665566;
-		}
-
-		h1, h2, p {
-			margin: 1.5em auto;
-			max-width: 100%;
-		}
-
-		p {
-			font-size: 1.05em;
-		}
-
-		h1 {
-			width: max-content;
-			max-width: 100%;
-			margin-top: 0;
-			margin-bottom: .5em;
-			font-size: 2.5em;
-			text-align: center;
-			color: #9e1a88;
-			background-image: none;
-			background-image: linear-gradient(to right, var(--purple), var(--orange));
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-
-		}
-
-		a {
-			color: var(--purple);
-			transition: color .275s;
-		}
-
-		a:hover,
-		a:focus {
-			color: var(--orange);
-		}
-
-		.logo {
-			text-align: center;
-		}
-
-		.authors {
-			margin-top: -.5em;
-			margin-bottom: 3.5em;
-			text-align: center;
-			font-size: 0.875em;
-			font-weight: 600;
-		}
-
-		.subtitle {
-			padding: 24px;
-			font-size: 1.3em;
-			letter-spacing: .02em;
-			margin-bottom: 80px;
-			text-align: center;
-			background-image: linear-gradient(to right, rgba(158, 26, 136, .05), rgba(228, 91, 11, .05));
-		}
-
-		h2 {
-			margin-top: 80px;
-			color: var(--orange);
-		}
-
-		table {
-			margin: 3em auto;
-			display: block;
-		}
-
-		body:not(.list) tbody,
-		body:not(.list) tr {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		tbody tr:first-child {
-			display: none;
-		}
-
-		tr {
-			width: calc(50% - 4px - 20px);
-			margin: 2px;
-			flex-direction: column;
-			border: 10px solid var(--orange-light);
-			border-radius: 12px;
-		}
-
-		/* All contents */
-		td {
-			padding: 20px;
-			transition: .275s all;
-		}
-
-		/* Bias Name */
-		tr td:first-child {
-			padding-bottom: 0;
-			text-align: center;
-			font-size: 1.3em;
-			font-weight: 600;
-			color: var(--orange);
-		}
-
-		tr td:first-child a {
-			color: inherit;
-			text-decoration: none;
-		}
-
-		tr td:nth-child(2) a {
-			color: var(--orange);
-		}
-
-		/* List layout */
-		.list td:first-child {
-			padding-bottom: 20px;
-			border-right: 0;
-			text-align: left;
-		}
-		.list td:nth-child(2) {
-			border-left: 0;
-		}
-
-		.list tr {
-			width: 100%;
-			margin: 2px 0;
-		}
-
-		.list table {
-			border-collapse: collapse;
-			display: table;
-		}
-
-		.list td {
-			vertical-align: middle;
-			border: 5px solid var(--orange-light);
-		}
-
-
-		/* Alternative colors */
-		h2:nth-of-type(2) {
-			color: var(--purple);
-		}
-		table:nth-of-type(2) tr {
-			border-color: var(--purple-light);
-		}
-		table:nth-of-type(2) tr td:first-child {
-			color: var(--purple);
-		}
-		table:nth-of-type(2) tr td:nth-child(2) a {
-			color: var(--purple);
-		}
-
-
-		h2:nth-of-type(3) {
-			color: var(--turquoise);
-		}
-		table:nth-of-type(3) tr {
-			border-color: var(--turquoise-light);
-		}
-		table:nth-of-type(3) tr td:first-child {
-			color: var(--turquoise);
-		}
-		table:nth-of-type(3) tr td:nth-child(2) a {
-			color: var(--turquoise);
-		}
-
-
-		/* Switcher button */
-		[id="switch"] {
-			position: fixed;
-			right: 20px;
-			top: 20px;
-			padding: 10px 24px;
-			font-weight: bold;
-			border: 0;
-			background: linear-gradient(to right, #e7762e, #e64247);
-			color: #FFF;
-			font-size: .875em;
-			border-radius: 4px;
-			box-shadow: 0 8px 8px -8px rgba(0,0,0,.3);
-			cursor: pointer;
-			transition: all .275s;
-		}
-
-		[id="switch"]:hover,
-		[id="switch"]:focus {
-			box-shadow: 0 8px 8px 0 rgba(0,0,0,.2);
-		}
-
-		footer {
-			padding: 40px 16px;
-			text-align: center;
-			font-size: .875em;
-		}
-
-		footer p {
-			margin: 1.5 0;
-		}
-
-		footer a {
-			color: inherit;
-		}
-
-		@media print {
-			/* Remove Switch button */
-			[id="switch"] {
-				display: none;
-			}
-
-			/* Don't visually distinguish links */
-			body table:nth-of-type(n) tr td:nth-child(n) a {
-				color: inherit;
-				text-decoration: none;
-			}
-		}
-
-		@media (max-width: 640px) {
-			body {
-				margin: 16px auto;
-				width: auto;
-				padding: 16px;
-			}
-			h1 {
-				font-size: 1.8em;
-			}
-			.subtitle {
-				font-size: 18px;
-				margin-bottom: 56px;
-			}
-
-			h2 {
-				margin-top: 56px;
-			}
-			[id="switch"] {
-				display: none;
-			}
-
-			table, tbody, tr, td {
-				width: auto!important;
-				display: block!important;
-				text-align: left!important;
-			}
-			tr:first-child {
-				display: none!important;
-			}
-
-			tr {
-				border-width: 4px;
-				margin-bottom: 8px;
-			}
-		}
-
-	</style>
 </head>
 
 <body>
 
 	<p class="logo">
-		<img src="favicon/ux-in-lux.png" width="240" height="240" alt="UX In Lux">
+		<img src="assets/favicon/ux-in-lux.png" width="240" height="240" alt="UX In Lux">
 	</p>
 
 	<h1>List of cognitive biases</h1>
@@ -308,7 +41,9 @@
 		<a href="https://twitter.com/geoffreycrofte">@GeoffreyCrofte</a>
 	</p>
 
-	<p class="subtitle">Cognitive biases are systematic patterns of deviation from norm or rationality in judgment, and are often studied in psychology and behavioral economics.</p>
+	<div class="subtitle">
+		<p>Cognitive biases are systematic patterns of deviation from norm or rationality in judgment, and are often studied in psychology and behavioral economics.</p>
+	</div>
 
 
 	<h2>Decision-making, belief, and behavioral biases</h2>
