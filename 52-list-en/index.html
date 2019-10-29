@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List of selected 52 cognitive biases</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+	<link rel="manifest" href="../favicon/site.webmanifest">
+	<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="../favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="og:image" content="../favicon/og-image.jpg">
+	<meta property="og:image:width" content="1908">
+	<meta property="og:image:height" content="999">
+	<meta property="og:title" content="Liste de biais cognitifs">
+	<meta property="og:description" content="La liste wikipedia des biais cognitif revisitée dans une version plus lisible.">
+	<meta property="og:url" content="https://uxinlux.github.io/cognitive-biases/">
+
+	<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		:root {
+			--purple: #9e1a88;
+			--purple-light: #daa7d2;
+			--orange: #e45b0b;
+			--orange-light: #f7ceb6;
+			--turquoise: #20B7B4;
+			--turquoise-light: #b8eae7;
+			--orange-decision: #F36F24;
+			--orange-decision-light: #ffe2d2;
+			--green-text: #307A3C;
+			--green-light:#dcead5;
+			--red-text: #BB3368;
+			--red-light:#f1c3d5;
+			--yellow-text: #AF7C09;
+			--yellow-light:#ffefb5;
+		}
+
+		body {
+			width: 20cm;
+			max-width: 100%;
+			margin: 24px auto 0;
+			padding: 0;
+			line-height: 1.6;
+			font-family: Helvetica, Arial, sans-serif;
+			color: #665566;
+		}
+
+		h1, h2, p {
+			margin: 1.5em auto;
+			max-width: 100%;
+		}
+
+		p {
+			font-size: 1.05em;
+		}
+
+		h1 {
+			width: max-content;
+			max-width: 100%;
+			margin-top: 0;
+			margin-bottom: .5em;
+			font-size: 2.5em;
+			text-align: center;
+			color: #9e1a88;
+			background-image: none;
+			background-image: linear-gradient(to right, var(--purple), var(--orange));
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+
+		}
+
+		a {
+			color: var(--purple);
+			transition: color .275s;
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--orange);
+		}
+
+		.logo {
+			text-align: center;
+		}
+
+		.authors {
+			margin-top: -.5em;
+			margin-bottom: 3.5em;
+			text-align: center;
+			font-size: 0.875em;
+			font-weight: 600;
+		}
+
+		.subtitle {
+			padding: 24px;
+			font-size: 1.3em;
+			letter-spacing: .02em;
+			margin-bottom: 80px;
+			text-align: center;
+			background-image: linear-gradient(to right, rgba(158, 26, 136, .05), rgba(228, 91, 11, .05));
+		}
+
+		h2 {
+			margin-top: 80px;
+			color: var(--orange-decision);
+		}
+
+		table {
+			margin: 3em auto;
+			display: block;
+		}
+
+		body:not(.list) tbody,
+		body:not(.list) tr {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		tbody tr:first-child {
+			display: none;
+		}
+
+		tr {
+			width: calc(50% - 4px - 20px);
+			margin: 2px;
+			flex-direction: column;
+			border: 10px solid var(--orange-decision-light);
+			border-radius: 12px;
+		}
+
+		/* All contents */
+		td {
+			padding: 20px;
+			transition: .275s all;
+		}
+
+		/* Bias Name */
+		tr td:first-child {
+			padding-bottom: 0;
+			text-align: center;
+			font-size: 1.3em;
+			font-weight: 600;
+			color: var(--orange-decision);
+		}
+
+		tr td:first-child a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		tr td:nth-child(2) a {
+			color: var(--orange-decision);
+		}
+
+		/* List layout */
+		.list td:first-child {
+			padding-bottom: 20px;
+			border-right: 0;
+			text-align: left;
+		}
+		.list td:nth-child(2) {
+			border-left: 0;
+		}
+
+		.list tr {
+			width: 100%;
+			margin: 2px 0;
+		}
+
+		.list table {
+			border-collapse: collapse;
+			display: table;
+		}
+
+		.list td {
+			vertical-align: middle;
+			border: 5px solid var(--orange-light);
+		}
+
+		h2:nth-of-type(2) {
+			color: var(--turquoise);
+		}
+		table:nth-of-type(2) tr {
+			border-color: var(--turquoise-light);
+		}
+		table:nth-of-type(2) tr td:first-child {
+			color: var(--turquoise);
+		}
+		table:nth-of-type(2) tr td:nth-child(2) a {
+			color: var(--turquoise);
+		}
+
+
+		/* Alternative colors */
+		h2:nth-of-type(3) {
+			color: var(--green-text);
+		}
+		table:nth-of-type(3) tr {
+			border-color: var(--green-light);
+		}
+		table:nth-of-type(3) tr td:first-child {
+			color: var(--green-text);
+		}
+		table:nth-of-type(3) tr td:nth-child(2) a {
+			color: var(--green-text);
+		}
+
+		/* Alternative colors */
+		h2:nth-of-type(4) {
+			color: var(--yellow-text);
+		}
+		table:nth-of-type(4) tr {
+			border-color: var(--yellow-light);
+		}
+		table:nth-of-type(4) tr td:first-child {
+			color: var(--yellow-text);
+		}
+		table:nth-of-type(4) tr td:nth-child(2) a {
+			color: var(--yellow-text);
+		}
+
+		/* Alternative colors */
+		h2:nth-of-type(5) {
+			color: var(--red-text);
+		}
+		table:nth-of-type(5) tr {
+			border-color: var(--red-light);
+		}
+		table:nth-of-type(5) tr td:first-child {
+			color: var(--red-text);
+		}
+		table:nth-of-type(5) tr td:nth-child(2) a {
+			color: var(--red-text);
+		}
+
+		/* Switcher button */
+		[id="switch"] {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			padding: 10px 24px;
+			font-weight: bold;
+			border: 0;
+			background: linear-gradient(to right, #e7762e, #e64247);
+			color: #FFF;
+			font-size: .875em;
+			border-radius: 4px;
+			box-shadow: 0 8px 8px -8px rgba(0,0,0,.3);
+			cursor: pointer;
+			transition: all .275s;
+		}
+
+		[id="switch"]:hover,
+		[id="switch"]:focus {
+			box-shadow: 0 8px 8px 0 rgba(0,0,0,.2);
+		}
+
+		footer {
+			padding: 40px 16px;
+			text-align: center;
+			font-size: .875em;
+		}
+
+		footer p {
+			margin: 1.5 0;
+		}
+
+		footer a {
+			color: inherit;
+		}
+
+		@media print {
+			/* Remove Switch button */
+			[id="switch"] {
+				display: none;
+			}
+
+			/* Don't visually distinguish links */
+			body table:nth-of-type(n) tr td:nth-child(n) a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		@media (max-width: 640px) {
+			body {
+				margin: 16px auto;
+				width: auto;
+				padding: 16px;
+			}
+			h1 {
+				font-size: 1.8em;
+			}
+			.subtitle {
+				font-size: 18px;
+				margin-bottom: 56px;
+			}
+
+			h2 {
+				margin-top: 56px;
+			}
+			[id="switch"] {
+				display: none;
+			}
+
+			table, tbody, tr, td {
+				width: auto!important;
+				display: block!important;
+				text-align: left!important;
+			}
+			tr:first-child {
+				display: none!important;
+			}
+
+			tr {
+				border-width: 4px;
+				margin-bottom: 8px;
+			}
+		}
+
+	</style>
+</head>
+
+
+<body>
+
+	<p class="logo">
+		<img src="favicon/ux-in-lux.png" width="240" height="240" alt="UX In Lux">
+	</p>
+
+	<h1>List of cognitive biases</h1>
+
+	<p class="authors">
+		Page made by<br>
+		<a href="https://stephaniewalter.design/">Stéphanie Walter</a>,
+		<a href="https://www.redisdead.net/">Laurence Vagner</a>,
+		<a href="https://twitter.com/geoffreycrofte">@GeoffreyCrofte</a>
+	</p>
+
+	<p class="subtitle">Cognitive biases are systematic patterns of deviation from norm or rationality in judgment, and are often studied in psychology and behavioral economics.</p>
+	<p>Here is a list of 52 selected biases organized in 5 different categories. They help team members become aware of their own biases and the different biases they can induce, whether on purpose or not, to users</p>
+
+
+	<h2>Decision-making & behavior</h2>
+
+	<p>These biases affect people's decision-making abilities, behaviour and the decisions they make based on the different information they get.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td>Anchoring</td>
+				<td>The tendency for people to depend too heavily on an initial piece of information offered (considered to be the "anchor") when making decisions. Those objects near the anchor tend to be assimilated toward it and those further away tend to be displaced in the other direction.
+				</td>
+			</tr>
+			<tr>
+				<td>Availability heuristic</td>
+				<td>The belief that if something can be recalled, it must be important, or at least more important than alternative solutions which are not as readily recalled. Subsequently people tend to heavily weigh their judgments toward more recent information, making new opinions biased toward that latest news.
+				</td>
+			</tr>
+			<tr>
+				<td>Default effect</td>
+				<td>When given a choice between several options, the tendency to favor the default one.</td>
+			</tr>
+			<tr>
+				<td>Denomination effect</td>
+				<td>The tendency to spend more money when it is denominated in small amounts (e.g.) rather than large amounts (e.g., bills).</td>
+			</tr>
+			<tr>
+				<td>Loss aversion</td>
+				<td>The disutility of giving up an object is greater than the utility associated with acquiring it. People have a tendency to prefer avoiding losses to acquiring equivalent gains: it is better to not lose 5€ than to find 5€.</td>
+			</tr>
+			<tr>
+				<td>Forer / Barnum Effect/td>
+				<td>The tendency for individuals to give high accuracy ratings to descriptions of their personality that supposedly are tailored specifically for them but are in fact vague and general enough to apply to a wide range of people. This effect can provide a partial some beliefs and practices, such as astrology, fortune telling, some types of personality tests, etc.</td>
+			</tr>
+			<tr>
+				<td>IKEA Effect</td>
+				<td>The tendency for people to place a disproportionately high value on objects that they partially assembled themselves, such as furniture from IKEA, regardless of the quality of the end product.</td>
+			</tr>
+			<tr>
+				<td>Illusory truth effect</td>
+				<td>The tendency to believe that a statement is true if it is easier to process, or if it has been stated multiple times, regardless of its actual veracity.</td>
+			</tr>
+			<tr>
+				<td>Mere exposure effect</td>
+				<td>The tendency to preferer or like some things merely because of familiarity with them.</td>
+			</tr>
+			<tr>
+				<td>Money illusion</td>
+				<td>The tendency to concentrate on the nominal value (value on the bills) of money rather than its value in terms of purchasing power</td>
+			</tr>
+			<tr>
+				<td>Status quo bias</td>
+				<td>The tendency to like things to stay relatively the same and be reluctant to any change. The current baseline (or status quo) is taken as a reference point, and any change from that baseline is perceived as a loss.</td>
+			</tr>
+			<tr>
+				<td>Unit bias</td>
+				<td>The tendency to want to finish a given unit of tasks or items. The individual perceives the standard suggested amount of consumption to be appropriate and will want to consume it all even if it’s too much. This applied to food portions, finishing a movie even if it’s bad, etc.</td>
+			</tr>
+			<tr>
+				<td>Authority bias</td>
+				<td>The tendency to attribute greater accuracy to the opinion of an authority figure (unrelated to its content) and be more influenced by that opinion.</td>
+			</tr>
+		</tobdy>
+	</table>
+
+	<h2>Thinking & problem solving</h2>
+	<p>These biases can change the way people think or solve problems and lead them to come up with wrong conclusions.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Automation bias
+				</td>
+				<td>The tendency for humans to favor suggestions from automated decision-making systems and to ignore contradictory information made without automation, even if it this information was in fact correct.
+				</td>
+			</tr>
+			<tr>
+				<td> Bandwagon effect
+				</td>
+				<td>The tendency to do (or believe) things because many other people already do (or believe) the same. The bandwagon effect is characterized by the probability of individual adoption increasing with respect to the proportion who have already done so.
+				</td>
+			</tr>
+			<tr>
+				<td>Confirmation bias
+				</td>
+				<td>The tendency to search for, interpret, focus on and remember information in a way that confirms one's preconceptions.
+				</td>
+			</tr>
+			<tr>
+				<td>Curse of knowledge
+				</td>
+				<td>When better-informed people find it extremely difficult to think about problems from the perspective of lesser-informed people. Those better-informed people unknowingly assume that the others have the background to understand. For example, a professor might no longer remember the difficulties that a young student encounters when learning a new subject.
+				</td>
+			</tr>
+			<tr>
+				<td>Hyperbolic discounting
+				</td>
+				<td>The tendency for people to have a stronger preference for more immediate payoffs relative to later payoffs. When faced with a choice between two rewards, the people will prefer the immediate reward even if it’s lower than a reward that will come in the future.
+				</td>
+			</tr>
+			<tr>
+				<td>Law of the instrument
+				</td>
+				<td>An over-reliance on a familiar tool or methods, ignoring or under-valuing alternative approaches. "If all you have is a hammer, everything looks like a nail."
+				</td>
+			</tr>
+			<tr>
+				<td>Pro-innovation bias
+				</td>
+				<td>The tendency to have an excessive optimism towards an invention or innovation's usefulness throughout society, while often failing to identify its limitations and weaknesses.
+				</td>
+			</tr>
+			<tr>
+				<td>Rhyme as reason effect
+				</td>
+				<td>The tendency to perceive rhyming as more truthful. For example, “an apple a day keeps the doctor away”.
+				</td>
+			</tr>
+			<tr>
+				<td>Fear of Missing out
+				</td>
+				<td>The fear experienced by individuals when faced with the thought that they might miss out on a social occasion, a new experience, a profitable investment or a satisfying event. This social anxiety is characterized by a desire to stay continually connected with what others are doing.
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+
+	<h2>Memories & recalling</h2>
+	<p>These biases can influence choices by either enhancing or impairing the recall of a memory or altering the content of a reported memory.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td> Information bias
+				</td>
+				<td>The tendency to seek information even when it cannot affect action. People tend to believe that the more information that can be acquired to make a decision, the better, even if that extra information is irrelevant for the decision.
+				</td>
+			</tr>
+			<tr>
+				<td> Pareidolia
+				</td>
+				<td>The tendency to interpret a vague (and random) stimulus as something known to the observer and significant, e.g., seeing images of animals or faces in clouds, the man in the moon, and hearing non-existent hidden messages on records played in reverse.
+				</td>
+			</tr>
+			<tr>
+				<td> Bizarreness effect
+				</td>
+				<td>Bizarre material is better remembered than common material.
+				</td>
+			</tr>
+			<tr>
+				<td> Context effect
+				</td>
+				<td>That cognition and memory are dependent on context. Out-of-context memories are more difficult to retrieve than in-context memories (e.g., recall time and accuracy for a work-related memory will be lower at home, and vice versa).
+				</td>
+			</tr>
+			<tr>
+				<td> Google effect
+				</td>
+				<td>The tendency to forget information that can be found readily online by using Internet search engines.
+				</td>
+			</tr>
+			<tr>
+				<td>Humor effect
+				</td>
+				<td>Humorous items are more easily remembered than non-humorous ones.
+				</td>
+			</tr>
+			<tr>
+				<td>Picture superiority effect
+				</td>
+				<td>Concepts that are learned by viewing pictures are more easily and frequently recalled than are concepts that are learned by viewing their written word form counterparts.
+				</td>
+			</tr>
+			<tr>
+				<td>Primacy effect
+				</td>
+				<td>Items near the end of a sequence are the easiest to recall, followed by the items at the beginning of a sequence; items in the middle are the least likely to be remembered.
+				</td>
+			</tr>
+			<tr>
+				<td>Spacing Effect
+				</td>
+				<td>Information is better recalled if exposure to it is repeated over a long span of time rather than a short one. For study lessons for instance, this effect shows that you will remember more when you space out your study then cramming last minute for a test the night before.
+				</td>
+			</tr>
+			<tr>
+				<td>Verbatim effect
+				</td>
+				<td>The "gist" of what someone has said is better remembered than the verbatim wording. This is because memories are representations, not exact copies.
+				</td>
+			</tr>
+			<tr>
+				<td>Restorff (isolation) effect
+				</td>
+				<td>An item that sticks out is more likely to be remembered than other items.
+				</td>
+			</tr>
+		</tobdy>
+	</table>
+
+	<h2>Interview & user testing</h2>
+	<p>These biases can directly influence designer, during interviews or user testing, and may change the outcome of our research. They influence the behaviour of people we interview or people who will test your products and services.</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td>Blind spot bias
+				</td>
+				<td>The tendency to see oneself as less biased than other people, or to be able to identify more cognitive biases in others than in oneself.
+				</td>
+			</tr>
+			<tr>
+				<td>Congruence bias
+				</td>
+				<td>The tendency to test hypotheses exclusively through direct testing, instead of testing possible alternative hypotheses. In an experiment, a subject will test their own usually naive hypothesis again and again instead of trying to disprove it.
+				</td>
+			</tr>
+			<tr>
+				<td>Courtesy bias
+				</td>
+				<td>The tendency to give an opinion that is more socially correct than one's true opinion, so as to avoid offending anyone.
+				</td>
+			</tr>
+			<tr>
+				<td>Hindsight bias
+				</td>
+				<td>The tendency for people to perceive events that have already occurred as having been more predictable than they actually were before the events took place (also known as the knew-it-all-along phenomenon).
+				</td>
+			</tr>
+			<tr>
+				<td>llusion of validity
+				</td>
+				<td>The tendency for people to overestimate their ability to interpret and predict accurately the outcome when analyzing a set of data, in particular when the data analyzed show a very consistent pattern—that is, when the data "tell" a coherent story.
+				</td>
+			</tr>
+			<tr>
+				<td>Negativity bias
+				</td>
+				<td>Psychological phenomenon by which humans have a greater recall of unpleasant memories compared with positive memories.
+				</td>
+			</tr>
+			<tr>
+				<td>Observer-expectancy effect
+				</td>
+				<td>When a researcher expects a given result and therefore unconsciously manipulates an experiment or misinterprets data in order to find it.
+				</td>
+			</tr>
+			<tr>
+				<td>Stereotyping
+				</td>
+				<td>Expecting a member of a group to have certain characteristics without having actual information about that individual.
+				</td>
+			</tr>
+			<tr>
+				<td>Peak-end rule
+				</td>
+				<td>The tendency for people to judge an experience largely based on how they felt at its peak (i.e., its most intense point) and at its end, rather than based on the total sum or average of every moment of the experience. The effect occurs regardless of whether the experience is pleasant or unpleasant.
+				</td>
+			</tr>
+
+		</tobdy>
+	</table>
+
+
+	<h2>Team work, social & meetings</h2>
+	<p>These biases can change the way groups of people work collectively and interact with each other, whether in a meeting room or in their daily lives in general</p>
+
+	<table>
+		<tobdy>
+			<tr>
+				<th scope="col" style="width:25%;">Name
+				</th>
+				<th scope="col" style="width:75%;">Description
+				</th>
+			</tr>
+			<tr>
+				<td>Dunning–Kruger effect
+				</td>
+				<td>The tendency for unskilled individuals to overestimate their own ability and the tendency for experts to underestimate their own ability.
+				</td>
+			</tr>
+			<tr>
+				<td>Framing effect
+				</td>
+				<td>The tendency to draw different conclusions from the same information, depending on how that information is presented and who presented it.
+				</td>
+			</tr>
+			<tr>
+				<td>"Not invented here" NIH
+				</td>
+				<td>Aversion to contact with or use of already existing products, research, standards, or knowledge developed outside a group because of their external origins and costs, such as royalties. Research illustrates a strong bias against ideas from the outside.
+				</td>
+			</tr>
+			<tr>
+				<td>Planning fallacy
+				</td>
+				<td>The tendency to underestimate task-completion time, regardless of the individual's knowledge that past tasks of a similar nature have taken longer to complete than generally planned. The bias only affects predictions about one's own tasks.
+				</td>
+			</tr>
+			<tr>
+				<td>Reactance
+				</td>
+				<td>The urge to do the opposite of what someone wants people to do out of a need to resist a perceived attempt to constrain their freedom of choice or limit their range of alternatives.
+				</td>
+			</tr>
+			<tr>
+				<td>Reactive devaluation
+				</td>
+				<td>The tendency to devalue proposals only because they purportedly originated with an adversary or antagonist.
+				</td>
+			</tr>
+			<tr>
+				<td>Group attribution error
+				</td>
+				<td>The tendency to believe either that the characteristics of an individual group member are reflective of the group as a whole, or that a group's decision outcome must reflect the preferences of individual group members, even when external information is available suggesting otherwise.
+				</td>
+			</tr>
+			<tr>
+				<td>Self-serving bias
+				</td>
+				<td>The tendency to claim more responsibility for successes than failures. Individuals attribute successes to internal causes and failures to external causes.
+				</td>
+			</tr>
+			<tr>
+				<td>System justification
+				</td>
+				<td>The tendency to defend and bolster the status quo. Existing social, economic, and political arrangements tend to be preferred, and alternatives disparaged, sometimes even at the expense of individual and collective self-interest.
+				</td>
+			</tr>
+			<tr>
+				<td>Cheerleader effect
+				</td>
+				<td>The tendency for people to appear more attractive in a group than in isolation.
+				</td>
+			</tr>
+
+		</tobdy>
+	</table>
+
+	<button type="button" id="switch">Lines/Cards</button>
+
+	<footer>
+		<p>List of biases selected and organized by <a href="https://www.redisdead.net/">Laurence Vagner</a> and <a href="https://stephaniewalter.design/">Stéphanie Walter</a>. Based on r <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases" hreflang="en" lang="en">List of cognitive biases</a> — <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0</a></p>
+		<p>Page made by <a href="https://twitter.com/geoffreycrofte">Geoffrey Crofte</a> for <a href="https://twitter.com/ux_lux">UX in Lux</a>.</p>
+	</footer>
+
+	<script>
+		let switcher = document.getElementById('switch'),
+			body = document.body;
+
+		switcher.addEventListener('click', function(){
+			body.classList.toggle('list');
+		});
+	</script>
+</body>
+
+</html>
